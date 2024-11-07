@@ -1,5 +1,5 @@
 
-#### Question 1:
+### Question 1:
 - Well, to know if the improvement of Tutorial in-game version 1.6.0 has impacted the User Experience better than in-game version 1.5.2. We need to identify some metrics between two versions to compare before give conclude if version 1.6.0’s tutorial is better. Based on the data columns, I were try to create some metrics to measure:
 
     - **Tutorial Complete Rate**: The rate of users who complete the entire tutorial.
@@ -7,10 +7,10 @@
         - **Win Rate**: Win rate between two versions. A good tutorial that impacted to user experience will help them increase win rate when they just start (let assume first 10 level).
         - **User Engagement**: A good tutorial will help users understand the game better and increase engagement. Otherwise, if the tutorial is confusing or not good, users may quickly abandon the game.
 
-#### Question 2:
+### Question 2:
 - Let hand on to analyze the data base on some metrics we were identify above, the data will show us does the tutorial change in-game version 1.6.0 really impacted user experience better version 1.5.2 or not.
 - I’m going to use Python to analyze it and will share my thoughts below.
-    #### The Tutorial Complete Rate:
+    ### The Tutorial Complete Rate:
     - Using python and calculate the complete rate for each version (For detail, you can take a look at the `analyze.ipynb` notebook)
 
         ![alt text](image.png)
@@ -35,13 +35,13 @@
             - $N_1$ and $N_2$ are the total number of users in versions 1.5.2 and 1.6.0, respectively.
             - $p_1$ and $p_2$ are represent the completion rate for 1.5.2 and 1.6.0.
         - With **Z-score** = 31.211, the **p-value** is nearly to 0. So it really have statistically significant and not due to random chance. That mean the tutorial in version 1.6.0 likely bad than version 1.5.2.
-    #### Win Rate:
+    ### Win Rate:
     - The reason I only selected the first 10 levels is because I believe the tutorial will impact these lower levels as users are just beginning to engage with the game. For levels beyond 10, I think users have gradually become familiar with the game, and how far they progress will depend more on individual skill rather than the tutorial's influence.
       
     ![alt text](image-5.png)
   
     - Hmmm, the win rate and time complete for first 10 level is not different to much between two version. So it not a good metrics to choose, no insigh at all.
-    #### User Engagement
+    ### User Engagement
     - From what I understand, 'ss' marks each time a user starts a new game session, which is crucial for measuring retention - how often users return to the game.
     - A good tutorial will encourage users to return and play more. Total interaction time: Users who understand the game well (thanks to the tutorial) tend to play longer.
     - The goal is to measure how many times users return to the game within the first 7 days
